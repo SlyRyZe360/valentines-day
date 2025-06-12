@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>I Love You</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: red;
+            font-size: 4rem;
+            opacity: 0;
+            animation: fadeIn 3s forwards ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1 id="message"></h1>
+
+<script>
+    window.onload = () => {
+        const message = document.getElementById("message");
+        message.textContent = "I ❤️ You";
+    };
+</script>
+</body>
+</html>
